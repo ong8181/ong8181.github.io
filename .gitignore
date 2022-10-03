@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Others
+.DS_Store
+rstat/*
+rstat2010.html
+img/cover_archives/*
