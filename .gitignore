@@ -41,3 +41,4 @@ vignettes/*.pdf
 # Others
 .DS_Store
 img/cover_archives/*
+.positai
