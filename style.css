@@ -18,9 +18,19 @@ a{border-bottom:1px dotted #aaa;color:#08d;text-decoration:none}
 a:hover{border-bottom:1px solid #06f;color:#333}
 
 
-/* ///////////////////////////////////////////////// rayout */
+/* ///////////////////////////////////////////////// layout */
 /*body{line-height:1.9em}*/
-body{margin:0 auto; width:750px;line-height:1.9em}
+/*body{margin:0 auto; width:750px;line-height:1.9em}
+
+/* /// edited on 23 June 2026 */
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    line-height: 1.9em;
+    box-sizing: border-box;
+}
+/* //////// */
 
 /* header,nav,section,footer{padding:0 13% 2.2em} */
 /* Ushio added in 2014.10.10*/
@@ -108,7 +118,7 @@ body{background-image:url(bg.png)}
 
 
 nav li
-{/* Ushio added in 2014.10.10*/
+{/* Ushio added on 2014.10.10*/
 float:left;
 width:16.66%;
 list-style-type:none;
@@ -120,27 +130,81 @@ margin-right: 0.55%;*/
 }
 
 
-
 /* nav only */
-/* nav li a{display:block;border-left:1px solid #dadada;border-bottom:1px solid #dadada;padding:1em 2.2em 1em;background:rgba(0,0,80,0.03); width:106px} */
+/* Ushio edited on 2026.06.23*/
+nav ul {
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* List setting */
+nav li {
+    list-style-type: none;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Link design */
 nav li a {
-/* Ushio added on 2014.10.10*/
+    display: block;
+    padding: 8px 0;
+    line-height: 2;
+    border-left: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background: rgba(0, 0, 80, 0.03);
+    box-sizing: border-box;
+}
+
+nav li a:hover {
+    color: #000;
+    border-bottom: 1px solid #dadada;
+    background: rgba(255, 255, 255, 1);
+}
+
+.rline a {
+    border-right: 1px solid #dadada;
+}
+
+/* For PC or tablet */
+@media screen and (max-width: 1279px) {
+    .switch { padding: .3em 6% .3em; }
+}
+
+/* For smartphone */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        width: 100%;
+    }
+    nav li a {
+        padding: 6px 0;
+        border-left: none;
+        border-right: none;
+    }
+    .rline a {
+        border-right: none;
+    }
+}
+
+/* version 2014.10.10
+nav li a {
 display:block;
 padding:5% 0 5%;
 border-left:1px solid #dadada;
 border-bottom:1px solid #dadada;
-/*padding: 0.25%;
-padding-top: 0.2%;
-margin-right: 0.55%;*/
 background:rgba(0,0,80,0.03);
-/*width:106px*/
-/* Ushio added on 2014.10.10*/
 }
 nav li a:hover{color:#000;border-bottom:1px solid #dadada;background:rgba(255,255,255,1)}
 .rline a{border-right:1px solid #dadada}
 
 @media screen and (max-width:1279px){.switch{padding:.3em 6% .3em}nav li a{padding:.2em 6% .2em;float:none;border-left:none}.rline a{border-right:none}}
 @media screen and (max-width:720px){nav li a{padding:.1em 6% .1em}}
+*/
 
 /*.markin{color:#000;font-weight:bold;background:rgba(50,165,100,.4);padding:.3em .4em .3em}*/
 .markin{color:rgba(30,180,100,1);font-weight:bold;padding:.3em .4em .3em}
