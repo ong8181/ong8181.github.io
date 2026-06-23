@@ -151,7 +151,7 @@ nav li {
 nav li a {
     display: block;
     padding: 8px 0;
-    line-height: 2;
+    line-height: 1.8;
     border-left: 1px solid #dadada;
     border-bottom: 1px solid #dadada;
     background: rgba(0, 0, 80, 0.03);
